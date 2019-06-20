@@ -6,7 +6,7 @@ class FileController {
     const box = await Box.findById(req.params.id);
 
     const file = await File.create({
-      title: req.file.orifinalname,
+      title: req.file.originalname,
       path: req.file.key
     });
 
