@@ -2,8 +2,9 @@ const mongoose = require("mongoose");
 
 const Box = new mongoose.Schema(
   {
-    title: {
-      type: String,
+    owner: {
+      type: mongoose.Schema.Types.ObjectId,
+      ref: 'User',
       require: true
     },
     files: [
